@@ -19,7 +19,7 @@ URL: http://localhost:3000/
 
 ***
 
-###/posts
+### /posts
 >REQUEST: `type: post` <br />
 
     {
@@ -31,7 +31,7 @@ URL: http://localhost:3000/
 
 ***
 
-###/posts/id
+### /posts/id
 >REQUEST: `type: get` <br />
 >RESPONSE `json object: {}`
 
@@ -44,13 +44,13 @@ URL: http://localhost:3000/
     
 ***
     
-###/posts/id
+### /posts/id
 >REQUEST: `type: delete` <br />
 RESPONSE `json object`
 
 ***
 
-###//posts/id
+### /posts/id
 >REQUEST: `type: put` <br />
 
     {
