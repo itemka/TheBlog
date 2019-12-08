@@ -65,3 +65,10 @@ or
     }
  
 >RESPONSE `json object`
+
+***
+
+## Использованные технологии в проекте
+
+* NodeJS (express, bodyParser)
+* MongoDB (mongoose, Schema)
