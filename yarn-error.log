@@ -1,0 +1,52 @@
+Arguments: 
+  /usr/local/bin/node /Users/itemka/Developer/Projects/TheBlog/node_modules/.bin/yarn add babel-cli babel-core babel-preset-evn babel-preset-stage-0 --dev
+
+PATH: 
+  /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin:/Library/Apple/bin:/Users/itemka/Developer/Projects/TheBlog/node_modules/.bin
+
+Yarn version: 
+  1.21.0
+
+Node version: 
+  12.6.0
+
+Platform: 
+  darwin x64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/babel-preset-evn: Not found
+      at Request.params.callback [as _callback] (/Users/itemka/Developer/Projects/TheBlog/node_modules/yarn/lib/cli.js:66938:18)
+      at Request.self.callback (/Users/itemka/Developer/Projects/TheBlog/node_modules/yarn/lib/cli.js:140622:22)
+      at Request.emit (events.js:203:13)
+      at Request.<anonymous> (/Users/itemka/Developer/Projects/TheBlog/node_modules/yarn/lib/cli.js:141594:10)
+      at Request.emit (events.js:203:13)
+      at IncomingMessage.<anonymous> (/Users/itemka/Developer/Projects/TheBlog/node_modules/yarn/lib/cli.js:141516:12)
+      at Object.onceWrapper (events.js:291:20)
+      at IncomingMessage.emit (events.js:208:15)
+      at endReadableNT (_stream_readable.js:1154:12)
+      at processTicksAndRejections (internal/process/task_queues.js:77:11)
+
+npm manifest: 
+  {
+    "name": "theblog",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "dependencies": {
+      "express": "^4.17.1",
+      "mongoose": "^5.7.14",
+      "yarn": "^1.21.0"
+    },
+    "devDependencies": {},
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "",
+    "license": "ISC"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
