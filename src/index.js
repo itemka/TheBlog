@@ -30,4 +30,45 @@ app.post('/posts', (request, response) => {
     });
 });
 
+// get handler
+app.get('/posts', (request, response) => {
+    // find posts
+    PostModel.find().then((error, posts) => {
+        if (error) {
+            response.send(error);
+        }
+        response.json(posts);
+    })
+});
+
+// delete handler
+app.delete('/posts/:id', (request, response) => {
+    // delete post by _id from /:id
+    PostModel.remove({
+        _id: request.params.id
+    }).then(post => {
+        if (post) {
+            response.json({status: 'ok'});
+        } else {
+            response.json({status: 'error'})
+        }
+
+    })
+});
+
+// put handler
+app.put('/posts/:id', (request, response) => {
+    // find by id and update
+    PostModel.findByIdAndUpdate(
+        request.params.id,
+        {$set: request.body},
+        error => {
+            if (error) {
+                response.send(error)
+            }
+            response.json({status: 'updated'})
+        }
+    )
+});
+
 app.listen(3000, () => console.log('3000 port is listening...'));

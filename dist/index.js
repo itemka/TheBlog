@@ -45,6 +45,42 @@ app.post('/posts', function (request, response) {
     });
 });
 
+// get handler
+app.get('/posts', function (request, response) {
+    // find posts
+    _Post2.default.find().then(function (error, posts) {
+        if (error) {
+            response.send(error);
+        }
+        response.json(posts);
+    });
+});
+
+// delete handler
+app.delete('/posts/:id', function (request, response) {
+    // delete post by _id from /:id
+    _Post2.default.remove({
+        _id: request.params.id
+    }).then(function (post) {
+        if (post) {
+            response.json({ status: 'ok' });
+        } else {
+            response.json({ status: 'error' });
+        }
+    });
+});
+
+// put handler
+app.put('/posts/:id', function (request, response) {
+    // find by id and update
+    _Post2.default.findByIdAndUpdate(request.params.id, { $set: request.body }, function (error) {
+        if (error) {
+            response.send(error);
+        }
+        response.json({ status: 'updated' });
+    });
+});
+
 app.listen(3000, function () {
     return console.log('3000 port is listening...');
 });
