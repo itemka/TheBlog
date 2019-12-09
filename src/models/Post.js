@@ -7,6 +7,9 @@ const PostSchema = new Schema(
         text: String
     },
     {
+        versionKey: false
+    },
+    {
         timestamp: true // added data to posts
     }
 );
